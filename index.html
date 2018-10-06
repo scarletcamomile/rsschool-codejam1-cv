@@ -1,12 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Summary</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Summary</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="main-wrapper"></div>
+  <div class="main-wrapper">
+    <div class="personal-data-container">
+      <div class="personal-data">
+        <span class="name">Daria Strokach</span>
+        <div class="contacts">
+          <span>E-mail: </span><span>scatletcamomile@mail.ru</span>
+          <span>Phone Number: </span><span>+375(29) 124-61-12</span>
+        </div>
+        <span class="education">BSIUR, Faculty of Economics and Engineering</span>
+        <span class="english-level">If you speak to me, I wiil probably understand and even reply.</span>
+      </div>
+      <div class="photo-container">
+        <img src="src" alt="">
+      </div>
+    </div>
+    <div class="summary-container">
+      <p class="summary">
+        For now I know a bit about JS/HTML/CSS and don't have much experience in ways how to use them.
+        But I learn fast, have plenty of free time and (probably the most important) a huge will to
+        develop and make progress. Just wanna find my own place on the way to perfection.
+      </p>
+    </div>
+    <div class="skills-container">
+      <div class="skill">
+        <span>Webpack</span>
+        <code class="code-webpack">
+          const config = {
+          entry: {
+          main: './src/js/index.js'
+          },
+          output: {
+          filename: 'bundle.js',
+          path: distPath
+          },
+          module: {
+          rules: [{
+          test: /\.html$/,
+          use: 'html-loader'
+          }]
+          },
+          plugins: [
+          new MiniCssExtractPlugin({
+          filename: '[name].css',
+          chunkFilename: '[id].css'
+          }),
+          new HtmlWebpackPlugin({
+          template: './src/index.html'
+          })
+          ]
+          };
+        </code>
+      </div>
+      <div class="skill">
+        <span>ES6</span>
+        <code class="code-es6">
+          const isGreater = (a, b) => {
+          return new Promise ((resolve, reject) => {
+          if(a > b) {
+          resolve(true)
+          } else {
+          reject(false)
+          }
+          })
+          }
+          isGreater(1, 2)
+          .then(result => {
+          console.log('greater')
+          })
+          .catch(result => {
+          console.log('smaller')
+          })
+        </code>
+      </div>
+      <div class="skill">
+        <span>Async programming</span>
+        <code class="code-async">
+          function * generatorFunction() { // Line 1
+          console.log('This will be executed first.');
+          yield 'Hello, '; // Line 2
+          console.log('I will be printed after the pause');
+          yield 'World!';
+          }
+          const generatorObject = generatorFunction();
+        </code>
+      </div>
+      <div class="skill">
+        <span>SASS</span>
+        <code class="code-sass">
+          .block {
+          $count: 10;
+          $margin_left: 5px;
+          $all_width: 1000px;
+
+          width: $all_width;
+          & > .sub_element {
+          width: ( $all_width / $count ) - $margin_left;
+          margin: 0 0 0 $margin_left;
+          }
+          }
+        </code>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
