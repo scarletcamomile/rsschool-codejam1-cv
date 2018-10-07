@@ -1,16 +1,16 @@
 body {
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .main-wrapper {
     max-width: 1024px;
     margin: 2% 2%;
     background: rgba(206, 206, 157, 0.27);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .personal-data-container {
@@ -75,12 +75,17 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+.skills-header {
+    text-transform: capitalize;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
 .skill {
     display: flex;
     flex-direction: column;
     padding: 10% 18% 0;
     margin: 0 auto;
-    /* border: #070707 solid 2px; */
 }
 
 .skill:nth-of-type(1) {
